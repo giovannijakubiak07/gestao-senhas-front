@@ -18,7 +18,7 @@ export default class Manager extends React.Component {
     callNext(e) {
         e.preventDefault(e);
         console.log("callNext");
-        const url = 'https://gestao-senhas-api.herokuapp.com/manager/callNext';
+        const url = 'http://localhost:8080/manager/callNext';
         axios.get(url)
             .then(() => {
                 this.props.updateListApp();
@@ -31,7 +31,7 @@ export default class Manager extends React.Component {
     resetPasswords(e) {
         e.preventDefault();
         console.log("resetPasswords");
-        const url = 'https://gestao-senhas-api.herokuapp.com/manager/reset';
+        const url = 'http://localhost:8080/manager/reset';
         axios.get(url)
             .then(() => {
                 this.props.updateListApp();

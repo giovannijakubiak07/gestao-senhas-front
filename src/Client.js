@@ -15,7 +15,7 @@ export default class Client extends React.Component {
 
     getPassword(e, type) {
         e.preventDefault();
-        const url = 'https://gestao-senhas-api.herokuapp.com/customer/newPassword?priority='+type;
+        const url = 'http://localhost:8080/customer/newPassword?priority='+type;
         axios.post(url , 
             {Accept: "*/*"})
             .then(response => {

@@ -41,7 +41,7 @@ class App extends Component {
 
   }
   updateList = () => {
-    const url = 'https://gestao-senhas-api.herokuapp.com/manager/list';
+    const url = 'http://localhost:8080/manager/list';
     axios.get(url)
       .then(response => {
         const data = response.data;
